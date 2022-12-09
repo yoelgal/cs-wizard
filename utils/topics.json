@@ -1,0 +1,20 @@
+{
+  "paper1": [
+    "1. Information Representation",
+    "2. Communication",
+    "3. Hardware *avoid*",
+    "4. Processor Fundamentals",
+    "5. System Software",
+    "6. Security, Privacy, and Integrity",
+    "7. Ethics",
+    "8. Databases"
+  ],
+  "paper3": [
+    "13. Data Representation",
+    "14. Comms. and Internet Tech",
+    "15. Hardware and Virtual Machines",
+    "16. System Software",
+    "17. Security",
+    "18. AI"
+  ]
+}
