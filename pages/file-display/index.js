@@ -12,7 +12,7 @@ const MyComponent = () => {
         <>
             {/*<h1>Hello</h1>*/}
             {/*<p>The current file id is: {router.query.id}</p>*/}
-            <iframe src={`https://p1questions1.tiiny.site/`} width="100%" height="1000px"></iframe>
+            <iframe src={`https://github.com/yoelgal/cs-wizard/blob/main/utils/data/p1questions1.pdf`} width="100%" height="1000px"></iframe>
         </>
     )
 }
