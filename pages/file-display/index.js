@@ -16,16 +16,26 @@ const MyComponent = () => {
     // const pdfUrl = 'https://www.mathsgenie.co.uk/resources/as-pure-algebraic-expressions.pdf'
 
     const id = router.query.id
+    console.log(typeof id)
+    if (id.includes('p3')) {
+        return (
+            <>
+                <p>Sorry, this file is currently unavailable</p>
+            </>
+        )
+    } else {
+        return (
+            <>
+                {/*<p>The current file num is: {paths[id]}</p>*/}
+                <iframe src={`${paths[id]}`} width="100%" height={iframeHeight}
+                        style={{maxHeight: `${iframeHeight}px`}}></iframe>
 
+                {/*<iframe src={`https://drive.google.com/file/d/1n5dD1zhhZUrRoZJXmAvj4a4YjSDmv85v/preview`} width="640" height="480"*/}
+                {/*        style={{maxHeight: `${iframeHeight}px`}}></iframe>*/}
+            </>
+        )
+    }
 
-    return (
-        <>
-            {/*<h1>Hello</h1>*/}
-            <p>The current file num is: {paths[id]}</p>
-            <iframe src={`https://docdro.id/ImuNldF`} width="100%" height={iframeHeight}
-                    style={{maxHeight: `${iframeHeight}px`}}></iframe>
-        </>
-    )
 }
 
 export default MyComponent
