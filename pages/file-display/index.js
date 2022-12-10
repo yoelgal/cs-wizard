@@ -17,7 +17,7 @@ const MyComponent = () => {
 
     const id = router.query.id
     console.log(typeof id)
-    if (id.includes('p3')) {
+    if ((id || '').includes('p3')) {
         return (
             <>
                 <p>Sorry, this file is currently unavailable</p>
