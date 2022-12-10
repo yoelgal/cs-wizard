@@ -14,6 +14,8 @@
     -webkit-text-fill-color: transparent;
 }
 
+
+
 .gridHeaders {
     padding: 10px;
 }
@@ -36,10 +38,17 @@
     font-size: 1.2rem;
 }
 
+.link  {
+    font-size: 1rem;
+}
+
 .link:hover {
     color: #0070f3;
+    font-size: 1.2rem;
     transition: 0.5s;
 }
+
+
 
 
 
