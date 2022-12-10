@@ -2,6 +2,7 @@ import {Document} from 'react-pdf'
 import {useRouter} from 'next/router';
 import React, {useState, useLayoutEffect} from 'react';
 import {paths} from "../../utils/utils"
+import {Header} from "semantic-ui-react";
 
 
 const MyComponent = () => {
@@ -17,10 +18,10 @@ const MyComponent = () => {
 
     const id = router.query.id
     console.log(typeof id)
-    if ((id || '').includes('p3')) {
+    if (!paths[id]) {
         return (
             <>
-                <p>Sorry, this file is currently unavailable</p>
+                <Header as='h1' style={{textAlign:'center', position: 'absolute',top: '50%', left:'50%', transform: 'translate(-50%, -50%)'}}>Sorry, this page is currently unavailable</Header>
             </>
         )
     } else {
