@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {Table, Header} from "semantic-ui-react";
 import topics from "../utils/topics.json"
