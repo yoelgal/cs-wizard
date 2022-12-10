@@ -133,9 +133,12 @@
     font-size: 0.7rem;
 }
 
+.link {
+    font-size: 1.2rem;
+}
+
 .link:hover {
     color: #0070f3;
-    font-size: 1.2rem;
     transition: 0.5s;
 }
 
