@@ -48,6 +48,29 @@
     transition: 0.5s;
 }
 
+.footer {
+    background: transparent;
+    position: relative;
+}
+
+.wave {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.contribute:hover {
+    color: #0070f3;
+    font-size: 1.2rem;
+    transition: 0.5s;
+    border-color: #0070f3;
+    border-style: solid;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+
+
 
 
 
