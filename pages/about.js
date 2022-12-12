@@ -24,11 +24,13 @@ const About = () => {
             }}>
                 <h1 className={styles.title} style={{fontSize: "4rem", marginBottom: "0"}}>About</h1>
                 <div style={{margin: "3rem"}}>
-                    <p>I made this website as a student studying A-Level Computer Science. Unfortunately there was no
-                        resource available, for the exam board I was sitting, that provided students with exam-style
-                        questions grouped by chapter. This resource will hopefully allow students to improve their
-                        skills in each specific topic rather than having to sprawl past papers for the right questions
-                        they&apos;re looking for.</p>
+                    <p>As a student studying A-Level Computer Science, I created this website to fill a gap in the
+                        available resources for my exam board. Many students struggle to find exam-style questions
+                        organized by chapter, which makes it hard for them to focus on specific topics and improve their
+                        skills. This website aims to address that issue by providing a collection of carefully selected
+                        and grouped questions that cover all the chapters in the syllabus. With this resource, students
+                        can easily find the questions they need and practice efficiently for their exams. I hope it will
+                        help them achieve better results and feel more confident in their abilities.</p>
                     <p>I would like to give thanks to the websites <span
                         style={{color: "#0070f3"}}>pastpapers.co</span> and <span
                         style={{color: "#0070f3"}}>gceguide.com</span> for providing me with the resources needed to put
