@@ -1,27 +1,43 @@
 import Head from 'next/head'
 import {Header} from "semantic-ui-react";
-import styles from '../styles/Home.module.css'
+import styles from '../styles/about.module.css'
 import React from "react";
 import WaveComponent from "../layout/wave";
 import {useRouter} from "next/router";
-const About = () =>{
+
+const About = () => {
 
     const router = useRouter()
-    const contactRoute = ()=>{
+    const contactRoute = () => {
         router.replace('/contact')
     }
 
     return (
         <>
-            <div style={{textAlign: 'center'}}>
-                <h1 className={styles.title} style={{fontSize:"4rem", marginBottom:"0"}}>About</h1>
-                <div style={{margin:"3rem"}}>
-                    <p>I made this website as a student studying A-Level Computer Science. Unfortunately there was no resource available, for the exam board I was sitting, that provided students with exam-style questions grouped by chapter. This resource will hopefully allow students to improve their skills in each specific topic rather than having to sprawl past papers for the right questions they&apos;re looking for.</p>
-                    <p>I would like to give thanks to the websites <span style={{color: "#0070f3"}}>pastpapers.co</span> and <span style={{color: "#0070f3"}}>gceguide.com</span> for providing me with the resources needed to put together the questions and solutions provided.</p>
+            <div style={{
+                textAlign: 'center',
+                position: 'relative',
+                minHeight: '100vh',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+            }}>
+                <h1 className={styles.title} style={{fontSize: "4rem", marginBottom: "0"}}>About</h1>
+                <div style={{margin: "3rem"}}>
+                    <p>I made this website as a student studying A-Level Computer Science. Unfortunately there was no
+                        resource available, for the exam board I was sitting, that provided students with exam-style
+                        questions grouped by chapter. This resource will hopefully allow students to improve their
+                        skills in each specific topic rather than having to sprawl past papers for the right questions
+                        they&apos;re looking for.</p>
+                    <p>I would like to give thanks to the websites <span
+                        style={{color: "#0070f3"}}>pastpapers.co</span> and <span
+                        style={{color: "#0070f3"}}>gceguide.com</span> for providing me with the resources needed to put
+                        together the questions and solutions provided.</p>
 
                 </div>
 
-                <footer className={styles.footer} style={{textAlign: "center", marginTop: 20, alignSelf: "center", position:'absolute', bottom: 0, width:'100%'}}>
+                <footer className={styles.footer}
+                        style={{textAlign: "center", marginTop: 20, position: 'relative', bottom: '0', width: '100%'}}>
                     <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
                     <p>By Yoel Gal</p>
 
@@ -41,12 +57,14 @@ const About = () =>{
                         d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
                 </a>
                 </span>
-                    <p><a href="https://github.com/yoelgal/cs-wizard" className={styles.contribute}>This site is OpenSource!
+                    <p><a href="https://github.com/yoelgal/cs-wizard" className={styles.contribute}>This site is
+                        OpenSource!
                         Contribute here</a></p>
 
                     <p className={styles.footerLinks}><span>Donate</span></p>
                     <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
-                    <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of CIE</p>
+                    <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
+                        CIE</p>
                     <WaveComponent></WaveComponent>
                 </footer>
             </div>

@@ -11,8 +11,6 @@ import Script from 'next/script'
 import WaveComponent from "../layout/wave";
 
 
-
-
 const Home = () => {
 
     const router = useRouter()
@@ -27,11 +25,11 @@ const Home = () => {
                     }
                 }
             )
-        //     script for hardware
+            //     script for hardware
         } else {
             let hardware = document.getElementById('q3')
             if (clicked > 1) {
-                clicked=0
+                clicked = 0
                 router.push({
                         pathname: `/file-display`,
                         query: {
@@ -39,30 +37,30 @@ const Home = () => {
                         }
                     }
                 )
-            } else if (clicked>0){
+            } else if (clicked > 0) {
                 hardware.innerText = 'Im warning you'
                 clicked++
-            } else  {
+            } else {
                 hardware.innerText = 'Are you sure?'
                 clicked++
             }
         }
     }
 
-    const aboutRoute = () =>{
+    const aboutRoute = () => {
         router.push('/about')
     }
 
 
-    const titles=['CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`]
-    let titleNum = titles.length-1
-    const titleClick = ()=>{
+    const titles = ['CS Wizard', `{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`]
+    let titleNum = titles.length - 1
+    const titleClick = () => {
         console.log('title clicked')
         const title = document.getElementById('title')
-        if (titleNum<titles.length-1) {
+        if (titleNum < titles.length - 1) {
             titleNum++
         } else {
-            titleNum=0
+            titleNum = 0
         }
         title.innerText = titles[titleNum]
     }
@@ -85,59 +83,67 @@ const Home = () => {
                     type: 'website'
                 }}
             />
-            <Header as="h1" id={'title'}  className={styles.title} onClick={()=>titleClick()}>Click Me!</Header>
+            <div style={{
+                position: 'relative',
+                minHeight: '100vh',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+            }}>
+
+                <Header as="h1" id={'title'} className={styles.title} onClick={() => titleClick()}>Click Me!</Header>
 
 
-            <Header as="h2" style={{textAlign: "center"}}>Paper 1</Header>
-            <Table celled style={{margin: "auto"}}>
-                <Table.Header>
-                    <Table.Row>
-                        <Table.HeaderCell className={styles.gridHeaders}>Topic</Table.HeaderCell>
-                        <Table.HeaderCell className={styles.gridHeaders}>Exam Questions</Table.HeaderCell>
-                        <Table.HeaderCell className={styles.gridHeaders}>Solutions</Table.HeaderCell>
-                    </Table.Row>
-                </Table.Header>
-                <Table.Body>
-                    {Array.from({length: 8}, (_, i) => (
-                        <Table.Row key={i}>
-                            <Table.Cell style={{padding: 10}}>{topics.paper1[i]}</Table.Cell>
-                            <Table.Cell className={styles.questionsAndSolutions} id={`q${i + 1}`}
-                                        onClick={() => handleClick(`p1q${i + 1}`)}>Questions</Table.Cell>
-                            <Table.Cell className={styles.questionsAndSolutions}
-                                        onClick={() => handleClick(`p1s${i + 1}`)}>Solutions</Table.Cell>
+                <Header as="h2" style={{textAlign: "center"}}>Paper 1</Header>
+                <Table celled style={{margin: "auto"}}>
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell className={styles.gridHeaders}>Topic</Table.HeaderCell>
+                            <Table.HeaderCell className={styles.gridHeaders}>Exam Questions</Table.HeaderCell>
+                            <Table.HeaderCell className={styles.gridHeaders}>Solutions</Table.HeaderCell>
                         </Table.Row>
-                    ))}
-                </Table.Body>
-            </Table>
+                    </Table.Header>
+                    <Table.Body>
+                        {Array.from({length: 8}, (_, i) => (
+                            <Table.Row key={i}>
+                                <Table.Cell style={{padding: 10}}>{topics.paper1[i]}</Table.Cell>
+                                <Table.Cell className={styles.questionsAndSolutions} id={`q${i + 1}`}
+                                            onClick={() => handleClick(`p1q${i + 1}`)}>Questions</Table.Cell>
+                                <Table.Cell className={styles.questionsAndSolutions}
+                                            onClick={() => handleClick(`p1s${i + 1}`)}>Solutions</Table.Cell>
+                            </Table.Row>
+                        ))}
+                    </Table.Body>
+                </Table>
 
 
-            <Header as="h2" style={{alignSelf: "center", textAlign: "center"}}>Paper 3</Header>
-            <Table celled style={{margin: "auto"}}>
-                <Table.Header>
-                    <Table.Row>
-                        <Table.HeaderCell className={styles.gridHeaders}>Topic</Table.HeaderCell>
-                        <Table.HeaderCell className={styles.gridHeaders}>Exam Questions</Table.HeaderCell>
-                        <Table.HeaderCell className={styles.gridHeaders}>Solutions</Table.HeaderCell>
-                    </Table.Row>
-                </Table.Header>
-                <Table.Body>
-                    {Array.from({length: 6}, (_, i) => (
-                        <Table.Row key={i}>
-                            <Table.Cell style={{padding: 10}}>{topics.paper3[i]}</Table.Cell>
-                            <Table.Cell className={styles.questionsAndSolutions}
-                                        onClick={() => handleClick(`p3q${i + 13}`)}>Questions</Table.Cell>
-                            <Table.Cell className={styles.questionsAndSolutions}
-                                        onClick={() => handleClick(`p3s${i + 13}`)}>Solutions</Table.Cell>
+                <Header as="h2" style={{alignSelf: "center", textAlign: "center"}}>Paper 3</Header>
+                <Table celled style={{margin: "auto"}}>
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell className={styles.gridHeaders}>Topic</Table.HeaderCell>
+                            <Table.HeaderCell className={styles.gridHeaders}>Exam Questions</Table.HeaderCell>
+                            <Table.HeaderCell className={styles.gridHeaders}>Solutions</Table.HeaderCell>
                         </Table.Row>
-                    ))}
-                </Table.Body>
-            </Table>
+                    </Table.Header>
+                    <Table.Body>
+                        {Array.from({length: 6}, (_, i) => (
+                            <Table.Row key={i}>
+                                <Table.Cell style={{padding: 10}}>{topics.paper3[i]}</Table.Cell>
+                                <Table.Cell className={styles.questionsAndSolutions}
+                                            onClick={() => handleClick(`p3q${i + 13}`)}>Questions</Table.Cell>
+                                <Table.Cell className={styles.questionsAndSolutions}
+                                            onClick={() => handleClick(`p3s${i + 13}`)}>Solutions</Table.Cell>
+                            </Table.Row>
+                        ))}
+                    </Table.Body>
+                </Table>
 
-            <footer className={styles.footer} style={{textAlign: "center", marginTop: 20, alignSelf: "center"}}>
-                <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
-                <p>By Yoel Gal</p>
+                <footer className={styles.footer} style={{textAlign: "center", marginTop: 20, alignSelf: "center", width:'100vw'}}>
+                    <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
+                    <p>By Yoel Gal</p>
 
-                <span><a className={styles.link} style={{fontSize: "1.2rem"}} href="https://github.com/yoelgal">
+                    <span><a className={styles.link} style={{fontSize: "1.2rem"}} href="https://github.com/yoelgal">
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512"
                          className="w-6 h-6 text-gray-400 hover:text-gray-500" height="1em" width="1em"
                          xmlns="http://www.w3.org/2000/svg">
@@ -153,14 +159,17 @@ const Home = () => {
                         d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
                 </a>
                 </span>
-                <p><a href="https://github.com/yoelgal/cs-wizard" className={styles.contribute}>This site is OpenSource!
-                    Contribute here</a></p>
+                    <p><a href="https://github.com/yoelgal/cs-wizard" className={styles.contribute}>This site is
+                        OpenSource!
+                        Contribute here</a></p>
 
-                <p className={styles.footerLinks}><span onClick={aboutRoute}>About</span><span>Donate</span></p>
-                <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
-                <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of CIE</p>
-                <WaveComponent></WaveComponent>
-            </footer>
+                    <p className={styles.footerLinks}><span onClick={aboutRoute}>About</span><span>Donate</span></p>
+                    <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
+                    <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
+                        CIE</p>
+                    <WaveComponent></WaveComponent>
+                </footer>
+            </div>
         </>
     )
 }
