@@ -1,7 +1,7 @@
 import {Document} from 'react-pdf'
 import {useRouter} from 'next/router';
 import React, {useState, useLayoutEffect} from 'react';
-import {paths} from "../../utils/utils"
+import {paths} from "../utils/utils"
 import {Header} from "semantic-ui-react";
 
 

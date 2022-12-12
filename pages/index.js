@@ -11,6 +11,8 @@ import Script from 'next/script'
 import WaveComponent from "../layout/wave";
 
 
+
+
 const Home = () => {
 
     const router = useRouter()
@@ -25,6 +27,7 @@ const Home = () => {
                     }
                 }
             )
+        //     script for hardware
         } else {
             let hardware = document.getElementById('q3')
             if (clicked > 1) {
@@ -44,8 +47,24 @@ const Home = () => {
                 clicked++
             }
         }
+    }
+
+    const aboutRoute = () =>{
+        router.push('/about')
+    }
 
 
+    const titles=['CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`]
+    let titleNum = titles.length-1
+    const titleClick = ()=>{
+        console.log('title clicked')
+        const title = document.getElementById('title')
+        if (titleNum<titles.length-1) {
+            titleNum++
+        } else {
+            titleNum=0
+        }
+        title.innerText = titles[titleNum]
     }
 
 
@@ -66,7 +85,7 @@ const Home = () => {
                     type: 'website'
                 }}
             />
-            <Header as="h1" className={styles.title}>CS Wizard</Header>
+            <Header as="h1" id={'title'}  className={styles.title} onClick={()=>titleClick()}>Click Me!</Header>
 
 
             <Header as="h2" style={{textAlign: "center"}}>Paper 1</Header>
@@ -114,9 +133,10 @@ const Home = () => {
                 </Table.Body>
             </Table>
 
-            <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
             <footer className={styles.footer} style={{textAlign: "center", marginTop: 20, alignSelf: "center"}}>
+                <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
                 <p>By Yoel Gal</p>
+
                 <span><a className={styles.link} style={{fontSize: "1.2rem"}} href="https://github.com/yoelgal">
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512"
                          className="w-6 h-6 text-gray-400 hover:text-gray-500" height="1em" width="1em"
@@ -136,9 +156,10 @@ const Home = () => {
                 <p><a href="https://github.com/yoelgal/cs-wizard" className={styles.contribute}>This site is OpenSource!
                     Contribute here</a></p>
 
+                <p className={styles.footerLinks}><span onClick={aboutRoute}>About</span><span>Donate</span></p>
                 <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
                 <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of CIE</p>
-                <WaveComponent className={styles.wave}></WaveComponent>
+                <WaveComponent></WaveComponent>
             </footer>
         </>
     )

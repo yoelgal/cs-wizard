@@ -5,10 +5,10 @@ const WaveComponent = () => (
     <Wave fill='url(#gradient)'
           paused={false}
           options={{
-              height: 20,
+              height: 30,
               amplitude: 20,
-              speed: 0.4,
-              points: 3
+              speed: 0.3,
+              points: 5
           }}
     >
         <defs>
