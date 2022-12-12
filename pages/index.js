@@ -9,6 +9,7 @@ import {motion} from "framer-motion";
 import Link from 'next/link'
 import Script from 'next/script'
 import WaveComponent from "../layout/wave";
+import {titles,titleNum,titleClick} from "../utils/utils";
 
 
 const Home = () => {
@@ -52,18 +53,7 @@ const Home = () => {
     }
 
 
-    const titles = ['CS Wizard', `{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`]
-    let titleNum = titles.length - 1
-    const titleClick = () => {
-        console.log('title clicked')
-        const title = document.getElementById('title')
-        if (titleNum < titles.length - 1) {
-            titleNum++
-        } else {
-            titleNum = 0
-        }
-        title.innerText = titles[titleNum]
-    }
+
 
 
     return (
@@ -91,7 +81,7 @@ const Home = () => {
                 justifyContent: 'space-between'
             }}>
 
-                <Header as="h1" id={'title'} className={styles.title} onClick={() => titleClick()}>Click Me!</Header>
+                <Header as="h1" id={'title'} className={styles.title} onClick={() => titleClick()}>CS Wizard</Header>
 
 
                 <Header as="h2" style={{textAlign: "center"}}>Paper 1</Header>
@@ -141,7 +131,7 @@ const Home = () => {
 
                 <footer className={styles.footer} style={{textAlign: "center", marginTop: 20, alignSelf: "center", width:'100vw'}}>
                     <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
-                    <p>By Yoel Gal</p>
+                    <p>CS Wizard | Built by Yoel Gal</p>
 
                     <span><a className={styles.link} style={{fontSize: "1.2rem"}} href="https://github.com/yoelgal">
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512"

@@ -5,12 +5,16 @@ import React from "react";
 import WaveComponent from "../layout/wave";
 import {useRouter} from "next/router";
 
+
 const About = () => {
 
     const router = useRouter()
-    const contactRoute = () => {
-        router.replace('/contact')
+
+    const homeRoute = ()=>{
+        router.replace('/')
     }
+
+
 
     return (
         <>
@@ -22,7 +26,8 @@ const About = () => {
                 flexDirection: 'column',
                 justifyContent: 'space-between'
             }}>
-                <h1 className={styles.title} style={{fontSize: "4rem", marginBottom: "0"}}>About</h1>
+                <Header as="h1" id={'title'} className={styles.title} onClick={()=>homeRoute()}>CS Wizard</Header>
+                <h1 className={styles.header} style={{fontSize: "4rem", marginBottom: "0"}}>About</h1>
                 <div style={{margin: "3rem"}}>
                     <p>As a student studying A-Level Computer Science, I created this website to fill a gap in the
                         available resources for my exam board. Many students struggle to find exam-style questions
@@ -41,7 +46,7 @@ const About = () => {
                 <footer className={styles.footer}
                         style={{textAlign: "center", marginTop: 20, position: 'relative', bottom: '0', width: '100%'}}>
                     <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
-                    <p>By Yoel Gal</p>
+                    <p>CS Wizard | Built by Yoel Gal</p>
 
                     <span><a className={styles.link} style={{fontSize: "1.2rem"}} href="https://github.com/yoelgal">
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512"
