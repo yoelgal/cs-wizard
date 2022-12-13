@@ -30,18 +30,8 @@ const paths = Object.assign({},
 );
 
 
-const titles = [ `{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`,'CS Wizard']
-let titleNum = titles.length-1
-const titleClick = ()=>{
-    const title = document.getElementById('title')
-    if (titleNum < titles.length - 1) {
-        titleNum++
-    } else {
-        titleNum = 0
-    }
-    title.innerText = titles[titleNum]
-}
 
 
 
-export {paths, titles,titleNum,titleClick}
+
+export {paths}

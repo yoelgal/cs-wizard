@@ -5,7 +5,7 @@
 .title {
     font-size: 2.2rem;
     display: inline-block;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     margin-right: auto;
     background: #03DDFF;
     background: linear-gradient(to right, #03DDFF 0%, #0000CF 100%);
@@ -15,7 +15,7 @@
 }
 
 .header {
-    font-size:4rem;
+    font-size: 4rem;
 
     display: inline-block;
     margin: 0 auto;
@@ -32,15 +32,12 @@
 }
 
 
-
-
 .footerSmall {
     font-size: 0.7rem;
 }
 
 
-
-.link  {
+.link {
     font-size: 1rem;
 }
 
@@ -54,7 +51,6 @@
     background: transparent;
     position: relative;
 }
-
 
 
 .contribute:hover {
@@ -97,6 +93,14 @@ div#footer {
 
 div#pageContent {
     padding-bottom: 60px;
+}
+
+.websiteMention {
+    background: #0070f3;
+    background: linear-gradient(to right, #03DDFF 0%, #0000CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
 }
 
 

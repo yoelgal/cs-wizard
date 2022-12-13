@@ -1,22 +1,23 @@
 import Head from 'next/head'
 import {Header} from "semantic-ui-react";
 import styles from '../styles/subPages.module.css'
-import React from "react";
 import WaveComponent from "../layout/wave";
 import {useRouter} from "next/router";
+import React, { useState } from 'react';
 
 
-const About = () => {
+
+const Donate = () => {
 
     const router = useRouter()
 
-    const homeRoute = ()=>{
+    const homeRoute = () => {
         router.replace('/')
     }
-    const donateRoute = ()=>{
-        router.replace('/donate')
-    }
 
+    const aboutRoute = () => {
+        router.replace('/about')
+    }
 
 
     return (
@@ -29,21 +30,13 @@ const About = () => {
                 flexDirection: 'column',
                 justifyContent: 'space-between'
             }}>
-                <Header as="h1" id={'title'} className={styles.title} onClick={()=>homeRoute()}>CS Wizard</Header>
-                <h1 className={styles.header} style={{fontSize: "4rem", marginBottom: "0"}}>About</h1>
+                <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()}>CS Wizard</Header>
+                <h1 className={styles.header} style={{fontSize: "4rem", marginBottom: "0"}}>Donate</h1>
                 <div style={{margin: "3rem"}}>
-                    <p>As a student studying A-Level Computer Science, I created this website to fill a gap in the
-                        available resources for my exam board. Many students struggle to find exam-style questions
-                        organized by chapter, which makes it hard for them to focus on specific topics and improve their
-                        skills. This website aims to address that issue by providing a collection of carefully selected
-                        and grouped questions that cover all the chapters in the syllabus. With this resource, students
-                        can easily find the questions they need and practice efficiently for their exams. I hope it will
-                        help them achieve better results and feel more confident in their abilities.</p>
-                    <p>I would like to give thanks to the websites <span
-                        className={styles.websiteMention}>pastpapers.co</span> and <span
-                        className={styles.websiteMention}>gceguide.com</span> for providing me with the resources needed to put
-                        together the questions and solutions provided.</p>
-
+                    <p>Thank you for using our website. Your support means a lot, and we appreciate your continued
+                        patronage. If you are able to make a donation, it would be greatly appreciated and would help me
+                        to continue providing high-quality content and services. We are grateful for your support and
+                        for being a part of our community. Thank you again for using this website.</p>
                 </div>
 
                 <footer className={styles.footer}
@@ -71,7 +64,7 @@ const About = () => {
                         OpenSource!
                         Contribute here</a></p>
 
-                    <p className={styles.footerLinks}><span onClick={()=>donateRoute()}>Donate</span></p>
+                    <p className={styles.footerLinks}><span onClick={() => aboutRoute()}>About</span></p>
                     <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
                     <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
                         CIE</p>
@@ -82,4 +75,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Donate

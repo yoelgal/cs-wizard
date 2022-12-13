@@ -9,10 +9,10 @@ import {motion} from "framer-motion";
 import Link from 'next/link'
 import Script from 'next/script'
 import WaveComponent from "../layout/wave";
-import {titles,titleNum,titleClick} from "../utils/utils";
 
 
-const Home = () => {
+
+const Home = ({ titles, pos }) => {
 
     const router = useRouter()
     let clicked = 0
@@ -51,8 +51,23 @@ const Home = () => {
     const aboutRoute = () => {
         router.push('/about')
     }
+    const donateRoute = () => {
+        router.push('/donate')
+    }
 
 
+
+
+    let titleNum = pos
+    const titleClick = ()=>{
+        const title = document.getElementById('title')
+        if (titleNum < titles.length - 1) {
+            titleNum++
+        } else {
+            titleNum = 0
+        }
+        title.innerText = titles[titleNum]
+    }
 
 
 
@@ -81,7 +96,7 @@ const Home = () => {
                 justifyContent: 'space-between'
             }}>
 
-                <Header as="h1" id={'title'} className={styles.title} onClick={() => titleClick()}>CS Wizard</Header>
+                <Header as="h1" id={'title'} className={styles.title} onClick={()=>titleClick()}>{titles[titleNum]}</Header>
 
 
                 <Header as="h2" style={{textAlign: "center"}}>Paper 1</Header>
@@ -153,7 +168,7 @@ const Home = () => {
                         OpenSource!
                         Contribute here</a></p>
 
-                    <p className={styles.footerLinks}><span onClick={aboutRoute}>About</span><span>Donate</span></p>
+                    <p className={styles.footerLinks}><span onClick={()=>aboutRoute()}>About</span><span onClick={()=>donateRoute()}>Donate</span></p>
                     <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
                     <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
                         CIE</p>
@@ -162,6 +177,19 @@ const Home = () => {
             </div>
         </>
     )
+}
+
+export async function getStaticProps() {
+    const titles = [ `{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`,'CS Wizard']
+
+    const pos = Math.floor(Math.random() * titles.length)
+
+    return {
+        props: {
+            titles: titles,
+            pos: pos
+        }
+    }
 }
 
 export default Home
