@@ -3,8 +3,7 @@ import {Header} from "semantic-ui-react";
 import styles from '../styles/subPages.module.css'
 import WaveComponent from "../layout/wave";
 import {useRouter} from "next/router";
-import React, { useState } from 'react';
-
+import React, {useState} from 'react';
 
 
 const Donate = () => {
@@ -33,10 +32,19 @@ const Donate = () => {
                 <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()}>CS Wizard</Header>
                 <h1 className={styles.header} style={{fontSize: "4rem", marginBottom: "0"}}>Donate</h1>
                 <div style={{margin: "3rem"}}>
-                    <p>Thank you for using our website. Your support means a lot, and we appreciate your continued
-                        patronage. If you are able to make a donation, it would be greatly appreciated and would help me
-                        to continue providing high-quality content and services. We are grateful for your support and
-                        for being a part of our community. Thank you again for using this website.</p>
+                    <p>CS Wizard is free to use</p>
+                    <p>However, building and maintaining the site, while also updating content to improve your
+                        experience takes a significant amount of time.</p>
+                    <p>Your contribution to this site will support things like:</p>
+                    <p>- Infrastructure (hosting, bandwidth, etc)</p>
+                    <p>- Addition + improvement of content</p>
+                    <p>- Addition of potential features</p>
+                    <p>Thank you for again using this website. I am grateful for your support and appreciate that you have
+                        chosen to spend your time on this site. Your feedback and suggestions are important, and we
+                        will continue to work hard to improve our site and provide you with a high-quality experience.
+                        Thank you again for your support, and I look forward to seeing you on our site again in the
+                        future.</p>
+
                 </div>
 
                 <footer className={styles.footer}

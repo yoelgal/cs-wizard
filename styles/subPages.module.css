@@ -95,12 +95,17 @@ div#pageContent {
     padding-bottom: 60px;
 }
 
-.websiteMention {
-    background: #0070f3;
-    background: linear-gradient(to right, #03DDFF 0%, #0000CF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.linkInPara {
+    color: #0070f3;
+
     overflow: hidden;
+}
+
+.linkInPara:hover {
+    font-size: 1.2rem;
+    color: #03DDFF;
+    overflow: hidden;
+    transition: 0.5s;
 }
 
 

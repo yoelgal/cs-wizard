@@ -10,13 +10,12 @@ const About = () => {
 
     const router = useRouter()
 
-    const homeRoute = ()=>{
+    const homeRoute = () => {
         router.replace('/')
     }
-    const donateRoute = ()=>{
+    const donateRoute = () => {
         router.replace('/donate')
     }
-
 
 
     return (
@@ -29,20 +28,23 @@ const About = () => {
                 flexDirection: 'column',
                 justifyContent: 'space-between'
             }}>
-                <Header as="h1" id={'title'} className={styles.title} onClick={()=>homeRoute()}>CS Wizard</Header>
+                <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()}>CS Wizard</Header>
                 <h1 className={styles.header} style={{fontSize: "4rem", marginBottom: "0"}}>About</h1>
                 <div style={{margin: "3rem"}}>
-                    <p>As a student studying A-Level Computer Science, I created this website to fill a gap in the
+                    <p>Hi!, I&apos;m Yoel Gal, the creator of CS Wizard. As a student studying A-Level Computer Science,
+                        I created this website to fill a gap in the
                         available resources for my exam board. Many students struggle to find exam-style questions
                         organized by chapter, which makes it hard for them to focus on specific topics and improve their
                         skills. This website aims to address that issue by providing a collection of carefully selected
                         and grouped questions that cover all the chapters in the syllabus. With this resource, students
                         can easily find the questions they need and practice efficiently for their exams. I hope it will
                         help them achieve better results and feel more confident in their abilities.</p>
-                    <p>I would like to give thanks to the websites <span
-                        className={styles.websiteMention}>pastpapers.co</span> and <span
-                        className={styles.websiteMention}>gceguide.com</span> for providing me with the resources needed to put
+                    <p>I would like to give thanks to the websites <a href="http://pastpapers.co"
+                        className={styles.linkInPara}>pastpapers.co</a> and <a href="https://gceguide.com"
+                        className={styles.linkInPara}>gceguide.com</a> for providing me with the resources needed
+                        to put
                         together the questions and solutions provided.</p>
+                    <p>If you would like to support the site, you can do so by sharing it with others, or via <span className={styles.linkInPara} onClick={()=>donateRoute()}>donation</span>.</p>
 
                 </div>
 
@@ -71,7 +73,6 @@ const About = () => {
                         OpenSource!
                         Contribute here</a></p>
 
-                    <p className={styles.footerLinks}><span onClick={()=>donateRoute()}>Donate</span></p>
                     <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
                     <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
                         CIE</p>

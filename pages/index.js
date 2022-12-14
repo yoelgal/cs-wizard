@@ -144,7 +144,7 @@ const Home = ({ titles, pos }) => {
                     </Table.Body>
                 </Table>
 
-                <footer className={styles.footer} style={{textAlign: "center", marginTop: 20, alignSelf: "center", width:'100vw'}}>
+                <footer className={styles.footer} style={{textAlign: "center", marginTop: 20, alignSelf: "center", width:'100%'}}>
                     <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
                     <p>CS Wizard | Built by Yoel Gal</p>
 
@@ -168,7 +168,7 @@ const Home = ({ titles, pos }) => {
                         OpenSource!
                         Contribute here</a></p>
 
-                    <p className={styles.footerLinks}><span onClick={()=>aboutRoute()}>About</span><span onClick={()=>donateRoute()}>Donate</span></p>
+                    <p className={styles.footerLinks}><span onClick={()=>aboutRoute()}>About</span></p>
                     <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
                     <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
                         CIE</p>
