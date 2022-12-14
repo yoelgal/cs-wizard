@@ -180,7 +180,7 @@ const Home = ({ titles, pos }) => {
 }
 
 export async function getStaticProps() {
-    const titles = [ `{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`,'CS Wizard', '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
+    const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
 
     const pos = Math.floor(Math.random() * titles.length)
 
