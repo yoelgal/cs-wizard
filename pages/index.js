@@ -10,9 +10,10 @@ import Link from 'next/link'
 import Script from 'next/script'
 import WaveComponent from "../layout/wave";
 
-
+const a = 1
 
 const Home = ({ titles, pos }) => {
+
 
     const router = useRouter()
     let clicked = 0
