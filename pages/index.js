@@ -12,7 +12,19 @@ import WaveComponent from "../layout/wave";
 
 
 
-const Home = ({ titles, pos }) => {
+const Home = () => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
+    let titleNum
+
+
+    const [title, setTitle] = useState(titles[titleNum])
+
+    useEffect(()=>{
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        titleNum = Math.floor(Math.random() * titles.length)
+        setTitle(titles[titleNum])
+    }, [titles])
 
     const router = useRouter()
     let clicked = 0
@@ -58,7 +70,6 @@ const Home = ({ titles, pos }) => {
 
 
 
-    let titleNum = pos
     const titleClick = ()=>{
         const title = document.getElementById('title')
         if (titleNum < titles.length - 1) {
@@ -96,7 +107,7 @@ const Home = ({ titles, pos }) => {
                 justifyContent: 'space-between'
             }}>
 
-                <Header as="h1" id={'title'} className={styles.title} onClick={()=>titleClick()}>{titles[titleNum]}</Header>
+                <Header as="h1" id={'title'} className={styles.title} onClick={()=>titleClick()}>{title}</Header>
 
 
                 <Header as="h2" style={{textAlign: "center"}}>Paper 1</Header>
@@ -179,18 +190,18 @@ const Home = ({ titles, pos }) => {
     )
 }
 
-export async function getStaticProps() {
-    const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
-
-    const pos = Math.floor(Math.random() * titles.length)
-
-    return {
-        props: {
-            titles: titles,
-            pos: pos
-        }
-    }
-}
+// export async function getStaticProps() {
+//     const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
+//
+//     const pos = Math.floor(Math.random() * titles.length)
+//
+//     return {
+//         props: {
+//             titles: titles,
+//             pos: pos
+//         }
+//     }
+// }
 
 export default Home
 
