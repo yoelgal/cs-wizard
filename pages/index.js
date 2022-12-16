@@ -9,22 +9,23 @@ import {motion} from "framer-motion";
 import Link from 'next/link'
 import Script from 'next/script'
 import WaveComponent from "../layout/wave";
+import Title from "../layout/title";
 
 const a = 1
 
 const Home = () => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
-    let titleNum
-
-
-    const [title, setTitle] = useState(titles[titleNum])
-
-    useEffect(()=>{
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        titleNum = Math.floor(Math.random() * titles.length)
-        setTitle(titles[titleNum])
-    }, [titles])
+    // // eslint-disable-next-line react-hooks/exhaustive-deps
+    // const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
+    // let titleNum
+    //
+    //
+    // const [title, setTitle] = useState(titles[titleNum])
+    //
+    // useEffect(()=>{
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    //     titleNum = Math.floor(Math.random() * titles.length)
+    //     setTitle(titles[titleNum])
+    // }, [titles])
 
 
     const router = useRouter()
@@ -64,22 +65,20 @@ const Home = () => {
     const aboutRoute = () => {
         router.push('/about')
     }
-    const donateRoute = () => {
-        router.push('/donate')
-    }
 
 
 
 
-    const titleClick = ()=>{
-        const title = document.getElementById('title')
-        if (titleNum < titles.length - 1) {
-            titleNum++
-        } else {
-            titleNum = 0
-        }
-        title.innerText = titles[titleNum]
-    }
+
+    // const titleClick = ()=>{
+    //     const title = document.getElementById('title')
+    //     if (titleNum < titles.length - 1) {
+    //         titleNum++
+    //     } else {
+    //         titleNum = 0
+    //     }
+    //     title.innerText = titles[titleNum]
+    // }
 
 
 
@@ -108,7 +107,8 @@ const Home = () => {
                 justifyContent: 'space-between'
             }}>
 
-                <Header as="h1" id={'title'} className={styles.title} onClick={()=>titleClick()}>{title}</Header>
+                {/*<Header as="h1" id={'title'} className={styles.title} onClick={()=>titleClick()}>{title}</Header>*/}
+                <Title></Title>
 
 
                 <Header as="h2" style={{textAlign: "center"}}>Paper 1</Header>
