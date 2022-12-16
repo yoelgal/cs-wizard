@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from "next/head";
 import Script from "next/script";
+import {NextSeo} from "next-seo";
 
 function Layout({children, title = "CS Wizard"}) {
     return (
@@ -17,6 +18,16 @@ function Layout({children, title = "CS Wizard"}) {
                 <meta name="author" content="Yoel Gal"/>
                 <title>{title}</title>
             </Head>
+            <NextSeo
+                title="CS Wizard"
+                description="This website is a revision tool to aid students who study A-level computer science"
+                openGraph={{
+                    title: 'CS Wizard',
+                    description: "This website is a revision tool to aid students who study A-level computer science",
+                    url: 'https://cs-wizard.vercel.app/',
+                    type: 'website'
+                }}
+            />
             {children}
         </div>
     );

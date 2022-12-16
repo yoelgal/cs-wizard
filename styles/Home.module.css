@@ -55,12 +55,7 @@
 
 .contribute:hover {
     color: #0070f3;
-    font-size: 1.2rem;
     transition: 0.5s;
-    border-color: #0070f3;
-    border-style: solid;
-    padding: 10px;
-    border-radius: 1rem;
 }
 
 .footerLinks span {
@@ -70,7 +65,6 @@
 
 .footerLinks span:hover {
     color: #0070f3;
-    font-size: 1.2rem;
     transition: 0.5s;
 }
 

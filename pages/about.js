@@ -29,31 +29,42 @@ const About = () => {
                 justifyContent: 'space-between'
             }}>
                 <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()}>CS Wizard</Header>
-                <h1 className={styles.header} style={{fontSize: "4rem", marginBottom: "0"}}>About</h1>
-                <div style={{margin: "3rem"}}>
-                    <p>Hi!, I&apos;m Yoel Gal, the creator of CS Wizard. As a student studying A-Level Computer Science,
-                        I created this website to fill a gap in the
-                        available resources for my exam board. Many students struggle to find exam-style questions
-                        organized by chapter, which makes it hard for them to focus on specific topics and improve their
-                        skills. This website aims to address that issue by providing a collection of carefully selected
-                        and grouped questions that cover all the chapters in the syllabus. With this resource, students
-                        can easily find the questions they need and practice efficiently for their exams. I hope it will
-                        help them achieve better results and feel more confident in their abilities.</p>
-                    <p>I would like to give thanks to the websites <a href="http://pastpapers.co"
-                        className={styles.linkInPara}>pastpapers.co</a> and <a href="https://gceguide.com"
-                        className={styles.linkInPara}>gceguide.com</a> for providing me with the resources needed
-                        to put
-                        together the questions and solutions provided.</p>
-                    <p>If you would like to support the site, you can do so by sharing it with others, or via <span className={styles.linkInPara} onClick={()=>donateRoute()}>donation</span>.</p>
+                <article>
 
-                </div>
+                    <h1 className={styles.header} style={{fontSize: "4rem", marginBottom: "0"}}>About</h1>
+                    <div style={{margin: "3rem"}}>
+                        <p>Hi!, I&apos;m Yoel Gal, the creator of CS Wizard. As a student studying A-Level Computer
+                            Science,
+                            I created this website to fill a gap in the
+                            available resources for my exam board. Many students struggle to find exam-style questions
+                            organized by chapter, which makes it hard for them to focus on specific topics and improve
+                            their
+                            skills. This website aims to address that issue by providing a collection of carefully
+                            selected
+                            and grouped questions that cover all the chapters in the syllabus. With this resource,
+                            students
+                            can easily find the questions they need and practice efficiently for their exams. I hope it
+                            will
+                            help them achieve better results and feel more confident in their abilities.</p>
+                        <p>I would like to give thanks to the websites <a href="http://pastpapers.co"
+                                                                          className={styles.linkInPara}>[pastpapers.co]</a> and <a
+                            href="https://gceguide.com"
+                            className={styles.linkInPara}>[gceguide.com]</a> for providing me with the resources needed
+                            to put
+                            together the questions and solutions provided.</p>
+                        <p>If you would like to support the site, you can do so by sharing it with others, or via <span
+                            className={styles.linkInPara} onClick={() => donateRoute()}>[donation]</span>.</p>
 
-                <footer className={styles.footer}
-                        style={{textAlign: "center", marginTop: 20, position: 'relative', bottom: '0', width: '100%'}}>
-                    <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
-                    <p>CS Wizard | Built by Yoel Gal</p>
+                    </div>
+                </article>
+                <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
+            </div>
 
-                    <span><a className={styles.link} style={{fontSize: "1.2rem"}} href="https://github.com/yoelgal">
+            <footer className={styles.footer}
+                    style={{textAlign: "center", marginTop: 20, position: 'relative', bottom: '0', width: '100%'}}>
+                <p>CS Wizard | Built by Yoel Gal</p>
+
+                <span><a className={styles.link} style={{fontSize: "1.2rem"}} href="https://github.com/yoelgal">
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512"
                          className="w-6 h-6 text-gray-400 hover:text-gray-500" height="1em" width="1em"
                          xmlns="http://www.w3.org/2000/svg">
@@ -69,16 +80,15 @@ const About = () => {
                         d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
                 </a>
                 </span>
-                    <p><a href="https://github.com/yoelgal/cs-wizard" className={styles.contribute}>This site is
-                        OpenSource!
-                        Contribute here</a></p>
+                <p><a href="https://github.com/yoelgal/cs-wizard" className={styles.contribute}>This site is
+                    OpenSource!
+                    Contribute here</a></p>
 
-                    <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
-                    <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
-                        CIE</p>
-                    <WaveComponent></WaveComponent>
-                </footer>
-            </div>
+                <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
+                <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
+                    CIE</p>
+                <WaveComponent></WaveComponent>
+            </footer>
         </>
     )
 }
