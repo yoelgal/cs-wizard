@@ -6,7 +6,7 @@ import {useRouter} from "next/router";
 import React, {useState} from 'react';
 
 
-const Donate = () => {
+const Support = () => {
 
     const router = useRouter()
 
@@ -89,4 +89,4 @@ const Donate = () => {
     )
 }
 
-export default Donate
+export default Support

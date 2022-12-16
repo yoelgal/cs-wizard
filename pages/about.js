@@ -13,13 +13,12 @@ const About = () => {
     const homeRoute = () => {
         router.replace('/')
     }
-    const donateRoute = () => {
-        router.replace('/donate')
+    const supportRoute = () => {
+        router.replace('/support')
     }
 
 
-    return (
-        <>
+    return (<>
             <div style={{
                 textAlign: 'center',
                 position: 'relative',
@@ -53,7 +52,7 @@ const About = () => {
                             to put
                             together the questions and solutions provided.</p>
                         <p>If you would like to support the site, you can do so by sharing it with others, or via <span
-                            className={styles.linkInPara} onClick={() => donateRoute()}>[donation]</span>.</p>
+                            className={styles.linkInPara} onClick={() => supportRoute()}>[donation]</span>.</p>
 
                     </div>
                 </article>
@@ -89,8 +88,7 @@ const About = () => {
                     CIE</p>
                 <WaveComponent></WaveComponent>
             </footer>
-        </>
-    )
+        </>)
 }
 
 export default About
