@@ -91,7 +91,7 @@ const Home = () => {
                 {/*<Header as="h1" id={'title'} className={styles.title} onClick={()=>titleClick()}>{title}</Header>*/}
                 <Title></Title>
 
-                <article style={{top:'50%'}}>
+                <article style={{top: '50%'}}>
                     <Header as="h2" style={{textAlign: "center"}}>Paper 1</Header>
                     <Table celled style={{margin: "auto"}}>
                         <Table.Header>
@@ -137,9 +137,9 @@ const Home = () => {
                     {/*    </Table.Body>*/}
                     {/*</Table>*/}
                 </article>
-                <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
-
+                <div></div>
             </div>
+            <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
             <footer className={styles.footer}
                     style={{textAlign: "center", marginTop: 20, alignSelf: "center", width: '100%'}}>
                 <p>CS Wizard | Built by Yoel Gal</p>

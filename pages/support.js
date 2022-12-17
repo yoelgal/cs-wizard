@@ -52,11 +52,11 @@ const Support = () => {
 
                     </div>
                 </article>
-
-                <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
+                <div></div>
             </div>
             <footer className={styles.footer}
                     style={{textAlign: "center", marginTop: 20, position: 'relative', bottom: '0', width: '100%'}}>
+                <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
                 <p>CS Wizard | Built by Yoel Gal</p>
 
                 <span><a className={styles.link} style={{fontSize: "1.2rem"}} href="https://github.com/yoelgal">

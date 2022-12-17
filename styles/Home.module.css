@@ -2,16 +2,46 @@
     padding: 0 2rem;
 }
 
+/*.title {*/
+/*    font-size: 2.2rem;*/
+/*    display: inline-block;*/
+/*    margin-left: 1.5rem;*/
+/*    margin-right: auto;*/
+/*    background: #03DDFF;*/
+/*    background: linear-gradient(to right, #03DDFF 0%, #0000CF 100%);*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*    overflow: hidden;*/
+/*}*/
 .title {
     font-size: 2.2rem;
     display: inline-block;
     margin-left: 1.5rem;
     margin-right: auto;
-    background: #03DDFF;
-    background: linear-gradient(to right, #03DDFF 0%, #0000CF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    overflow: hidden;
+    background: conic-gradient(#00FFF6, #009EFF, #0014FF, #00FFF6);
+    background-clip: text;
+    color: transparent;
+    background-size: 2000px 2000px;
+    animation: rgb 5s infinite linear;
+}
+
+@keyframes rgb {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 100%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+
 }
 
 
