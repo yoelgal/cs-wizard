@@ -11,7 +11,7 @@ import Script from 'next/script'
 import WaveComponent from "../layout/wave";
 import Title from "../layout/title";
 
-const a = 1
+const a = 2
 
 const Home = () => {
     // // eslint-disable-next-line react-hooks/exhaustive-deps
