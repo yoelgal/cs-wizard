@@ -1,66 +1,18 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import {Table, Header} from "semantic-ui-react";
-import topics from "../utils/topics.json"
-import {useRouter} from "next/router";
-import {NextSeo} from 'next-seo';
-import React, {useEffect, useState, useRef, useImperativeHandle} from 'react';
-import {motion} from "framer-motion";
-import Link from 'next/link'
-import Script from 'next/script'
-import WaveComponent from "../layout/wave";
 import Title from "../layout/title";
+import {Header} from "semantic-ui-react";
+import styles from "../styles/Extra.module.css";
+import {useRouter} from "next/router";
+import WaveComponent from "../layout/wave";
 
-const a = 1
-
-const Home = () => {
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
-    // const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
-    // let titleNum
-    //
-    //
-    // const [title, setTitle] = useState(titles[titleNum])
-    //
-    // useEffect(()=>{
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    //     titleNum = Math.floor(Math.random() * titles.length)
-    //     setTitle(titles[titleNum])
-    // }, [titles])
-
-
+const ExtraStuff = () => {
     const router = useRouter()
-
-
-
+    const homeRoute = () => {
+        router.replace('/')
+    }
 
     const aboutRoute = () => {
-        router.push('/about')
+        router.replace('/about')
     }
-
-    const paper1Route = ()=>{
-        router.push('/paper1')
-    }
-    const paper3Route = ()=>{
-        router.push('/paper3')
-    }
-
-    const extraRoute =()=>{
-        router.push('/extrastuff')
-    }
-
-
-
-
-    // const titleClick = ()=>{
-    //     const title = document.getElementById('title')
-    //     if (titleNum < titles.length - 1) {
-    //         titleNum++
-    //     } else {
-    //         titleNum = 0
-    //     }
-    //     title.innerText = titles[titleNum]
-    // }
-
 
     return (
         <>
@@ -71,16 +23,17 @@ const Home = () => {
                 flexDirection: 'column',
                 justifyContent: 'space-between'
             }}>
+                <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()}>CS Wizard</Header>
 
-                <Title></Title>
-
-                <div id={'Content'} className={styles.content}>
-                    <p className={styles.pageHeader} onClick={()=>paper1Route()}>Paper 1</p>
-                    <p className={styles.pageHeader} onClick={()=>paper3Route()}>Paper 3</p>
-                    <p className={styles.pageHeader} onClick={()=>extraRoute()}>Extra Stuff</p>
-                </div>
-                <div></div>
+                <Header as='h1' style={{
+                    textAlign: 'center',
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)'
+                }}>Sorry, this page is currently unavailable</Header>
             </div>
+            <div></div>
             <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
             <footer className={styles.footer}
                     style={{textAlign: "center", marginTop: 20, alignSelf: "center", width: '100%'}}>
@@ -116,7 +69,4 @@ const Home = () => {
     )
 }
 
-
-
-export default Home
-
+export default ExtraStuff

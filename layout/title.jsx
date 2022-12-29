@@ -5,6 +5,8 @@ import React, {useEffect, useState} from "react";
 
 const Title = ()=>{
 
+    let clicked = false
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
     let titleNum
@@ -27,6 +29,8 @@ const Title = ()=>{
         }
         titleDiv.innerText = titles[titleNum]
     }
+
+
 
     return (
         <Header as="h1" id={'title'} className={styles.title} onClick={()=>titleClick()}>{title}</Header>

@@ -1,65 +1,38 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Papers.module.css'
 import {Table, Header} from "semantic-ui-react";
 import topics from "../utils/topics.json"
 import {useRouter} from "next/router";
-import {NextSeo} from 'next-seo';
 import React, {useEffect, useState, useRef, useImperativeHandle} from 'react';
-import {motion} from "framer-motion";
-import Link from 'next/link'
-import Script from 'next/script'
 import WaveComponent from "../layout/wave";
 import Title from "../layout/title";
 
-const a = 1
 
-const Home = () => {
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
-    // const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
-    // let titleNum
-    //
-    //
-    // const [title, setTitle] = useState(titles[titleNum])
-    //
-    // useEffect(()=>{
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    //     titleNum = Math.floor(Math.random() * titles.length)
-    //     setTitle(titles[titleNum])
-    // }, [titles])
+const Paper3 = () => {
 
 
     const router = useRouter()
+    let clicked = 0
 
+    const handleClick = (id) => {
+        router.push({
+                pathname: `/file-display`,
+                query: {
+                    id: id
+                }
+            }
+        )
+    }
 
-
+    const homeRoute = () => {
+        router.replace('/')
+    }
 
     const aboutRoute = () => {
-        router.push('/about')
-    }
-
-    const paper1Route = ()=>{
-        router.push('/paper1')
-    }
-    const paper3Route = ()=>{
-        router.push('/paper3')
-    }
-
-    const extraRoute =()=>{
-        router.push('/extrastuff')
+        router.replace('/about')
     }
 
 
 
-
-    // const titleClick = ()=>{
-    //     const title = document.getElementById('title')
-    //     if (titleNum < titles.length - 1) {
-    //         titleNum++
-    //     } else {
-    //         titleNum = 0
-    //     }
-    //     title.innerText = titles[titleNum]
-    // }
 
 
     return (
@@ -72,13 +45,33 @@ const Home = () => {
                 justifyContent: 'space-between'
             }}>
 
-                <Title></Title>
+                <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()}>CS Wizard</Header>
 
-                <div id={'Content'} className={styles.content}>
-                    <p className={styles.pageHeader} onClick={()=>paper1Route()}>Paper 1</p>
-                    <p className={styles.pageHeader} onClick={()=>paper3Route()}>Paper 3</p>
-                    <p className={styles.pageHeader} onClick={()=>extraRoute()}>Extra Stuff</p>
-                </div>
+                <article style={{top: '50%'}}>
+
+
+                    <Header as="h2" style={{alignSelf: "center", textAlign: "center"}}>Paper 3</Header>
+                    <Table celled style={{margin: "auto"}}>
+                        <Table.Header>
+                            <Table.Row>
+                                <Table.HeaderCell className={styles.gridHeaders}>Topic</Table.HeaderCell>
+                                <Table.HeaderCell className={styles.gridHeaders}>Exam Questions</Table.HeaderCell>
+                                <Table.HeaderCell className={styles.gridHeaders}>Solutions</Table.HeaderCell>
+                            </Table.Row>
+                        </Table.Header>
+                        <Table.Body>
+                            {Array.from({length: 6}, (_, i) => (
+                                <Table.Row key={i}>
+                                    <Table.Cell style={{padding: 10}}>{topics.paper3[i]}</Table.Cell>
+                                    <Table.Cell className={styles.questionsAndSolutions}
+                                                onClick={() => handleClick(`p3q${i + 13}`)}>Questions</Table.Cell>
+                                    <Table.Cell className={styles.questionsAndSolutions}
+                                                onClick={() => handleClick(`p3s${i + 13}`)}>Solutions</Table.Cell>
+                                </Table.Row>
+                            ))}
+                        </Table.Body>
+                    </Table>
+                </article>
                 <div></div>
             </div>
             <hr style={{margin: '3rem', marginBottom: '2rem'}}></hr>
@@ -117,6 +110,4 @@ const Home = () => {
 }
 
 
-
-export default Home
-
+export default Paper3

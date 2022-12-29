@@ -2,7 +2,17 @@
     padding: 0 2rem;
 }
 
-
+/*.title {*/
+/*    font-size: 2.2rem;*/
+/*    display: inline-block;*/
+/*    margin-left: 1.5rem;*/
+/*    margin-right: auto;*/
+/*    background: #03DDFF;*/
+/*    background: linear-gradient(to right, #03DDFF 0%, #0000CF 100%);*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*    overflow: hidden;*/
+/*}*/
 .title {
     font-size: 2.2rem;
     display: inline-block;
@@ -36,38 +46,19 @@
 
 
 
-.content {
-    padding: 1rem;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: center;
+.gridHeaders {
+    padding: 10px;
+}
+
+.questionsAndSolutions {
     text-align: center;
-    /*border: red solid;*/
-
 }
 
-.pageHeader{
-    position: relative;
-    /*border: red solid;*/
-    font-size: 2rem;
-    display: inline-block;
-    margin: 1rem auto;
-}
-
-.pageHeader:hover {
-    font-size: 3rem;
+.questionsAndSolutions:hover {
     color: #0070f3;
-    transition: 0.4s ease;
+    font-size: 1.2rem;
+    transition: 0.5s;
 }
-
-
-
-
-
-
 
 .footerSmall {
     font-size: 0.7rem;
