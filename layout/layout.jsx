@@ -10,6 +10,12 @@ function Layout({children, title = "CS Wizard"}) {
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8232883373255094"
                     crossorigin="anonymous"></Script>
             {/* Google Analytics */}
+            <Script async
+                type="text/javascript"
+                src="https://app.termly.io/embed.min.js"
+                data-auto-block="on"
+                data-website-uuid="bb489e9f-b0e6-4e47-a9ea-ed698c5ad90f"
+            ></Script>
             <Head>
                 <link rel="shortcut icon" href={"../../public/favicon.ico"}/>
                 <meta name="robots" content="index, follow"/>

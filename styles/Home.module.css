@@ -52,13 +52,13 @@
 .pageHeader{
     position: relative;
     /*border: red solid;*/
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: inline-block;
     margin: 1rem auto;
 }
 
 .pageHeader:hover {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #0070f3;
     transition: 0.4s ease;
 }

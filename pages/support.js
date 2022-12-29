@@ -44,10 +44,10 @@ const Support = () => {
                         <p>Thank you for again using this website. I am grateful for your support and appreciate that
                             you
                             have
-                            chosen to spend your time on this site. Your feedback and suggestions are important, and we
+                            chosen to spend your time on this site. Your feedback and suggestions are important, and I
                             will continue to work hard to improve our site and provide you with a high-quality
                             experience.
-                            Thank you again for your support, and I look forward to seeing you on our site again in the
+                            Thank you again for your support, and I look forward to seeing you on this site again in the
                             future.</p>
 
                     </div>
