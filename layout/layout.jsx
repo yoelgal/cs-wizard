@@ -6,6 +6,12 @@ import {NextSeo} from "next-seo";
 function Layout({children, title = "CS Wizard"}) {
     return (
         <div>
+            <Script
+                type="text/javascript"
+                src="https://app.termly.io/embed.min.js"
+                data-auto-block="on"
+                data-website-uuid="bb489e9f-b0e6-4e47-a9ea-ed698c5ad90f"
+            ></Script>
             <Script async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8232883373255094"
                     crossorigin="anonymous"></Script>
@@ -28,12 +34,6 @@ function Layout({children, title = "CS Wizard"}) {
                     type: 'website'
                 }}
             />
-            <Script
-                    type="text/javascript"
-                    src="https://app.termly.io/embed.min.js"
-                    data-auto-block="on"
-                    data-website-uuid="bb489e9f-b0e6-4e47-a9ea-ed698c5ad90f"
-            ></Script>
             {children}
         </div>
     );
