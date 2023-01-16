@@ -13,6 +13,11 @@
     background-size: 2000px 2000px;
     animation: rgb 5s infinite linear;
 }
+
+.title:hover{
+    cursor: pointer;
+}
+
 @keyframes rgb {
     0% {
         background-position: 0 0;
@@ -63,6 +68,8 @@
     color: #0070f3;
     font-size: 1.2rem;
     transition: 0.5s;
+    cursor: pointer;
+
 }
 
 .footer {
@@ -74,6 +81,8 @@
 .contribute:hover {
     color: #0070f3;
     transition: 0.5s;
+    cursor: pointer;
+
 }
 
 .footerLinks span {
@@ -84,6 +93,8 @@
 .footerLinks span:hover {
     color: #0070f3;
     transition: 0.5s;
+    cursor: pointer;
+
 }
 
 
@@ -117,6 +128,8 @@ div#pageContent {
     color: #0070f3;
     overflow: hidden;
     transition: 0.5s;
+    cursor: pointer;
+
 }
 
 
