@@ -8,7 +8,7 @@ const Title = ()=>{
     let clicked = false
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const titles = [ 'CS Wizard',`{ "title":"CS Wizard" }`, `// CS Wizard`, `/* CS Wizard */`, '# CS Wizard','CSWizard()','CS.Wizard.js','! CS Wizard','CSWizard;','-- CS Wizard','"" || CS Wizard']
+    const titles = [ "<span>CS Wizard</span>","<span>&lcub; &quot;title&quot;:&quot;CS Wizard&quot; &rcub;</span>", "<span>// CS Wizard</span>", "<span>/* CS Wizard */</span>", '<span># CS Wizard</span>','<span>CSWizard()</span>','<span>CS.Wizard.js</span>','<span>! CS Wizard</span>','<span>CSWizard;</span>','<span>-- CS Wizard</span>','<span>"" || CS Wizard</span>', "<span>CS <em>Rizzard</em></span>"]
     let titleNum
 
 
@@ -17,7 +17,8 @@ const Title = ()=>{
     useEffect(()=>{
         // eslint-disable-next-line react-hooks/exhaustive-deps
         titleNum = Math.floor(Math.random() * titles.length)
-        setTitle(titles[titleNum])
+        const titleDiv = document.getElementById('title')
+        titleDiv.innerHTML = titles[titleNum]
     }, [titles])
 
     const titleClick = ()=>{
@@ -27,7 +28,7 @@ const Title = ()=>{
         } else {
             titleNum = 0
         }
-        titleDiv.innerText = titles[titleNum]
+        titleDiv.innerHTML = titles[titleNum]
     }
 
 
