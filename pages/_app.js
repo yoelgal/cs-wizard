@@ -1,17 +1,29 @@
 import '../styles/globals.css'
 import Layout from "../layout/layout";
 import {Analytics} from '@vercel/analytics/react';
+import Head from "next/head";
+
 
 
 function MyApp({Component, pageProps}) {
 
 
-    return(
+    return (
+        <>
+            <Head>
+                <link rel="shortcut icon" href="../public/images/favicon.ico"/>
+                <meta name="robots" content="index, follow"/>
+                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
+                <meta name="language" content="English"/>
+                <meta name="author" content="Yoel Gal"/>
+                <title>CS Wizard</title>
+            </Head>
             <Layout>
                 <Component {...pageProps} />
                 <Analytics></Analytics>
             </Layout>
-        )
+        </>
+)
 
 
 }
