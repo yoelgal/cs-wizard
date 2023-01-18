@@ -11,7 +11,7 @@ function MyApp({Component, pageProps}) {
     return (
         <>
             <Head>
-                <link rel="shortcut icon" href="../public/images/favicon.ico"/>
+                <link rel="shortcut icon" href="../public/favicon.ico"/>
                 <meta name="google-site-verification" content="EAce2thRJHwplmT0hGDyRx2WNan_yezs7cTbbCUtrjQ" />
                 <meta name="robots" content="index, follow"/>
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
