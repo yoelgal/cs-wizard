@@ -15,10 +15,7 @@ const Paper3 = () => {
 
     const handleClick = (id) => {
         router.push({
-                pathname: `/file-display`,
-                query: {
-                    id: id
-                }
+                pathname: `/pdf/${id}.pdf`,
             }
         )
     }
@@ -30,9 +27,6 @@ const Paper3 = () => {
     const aboutRoute = () => {
         router.replace('/about')
     }
-
-
-
 
 
     return (

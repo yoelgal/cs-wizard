@@ -16,10 +16,7 @@ const Paper1 = () => {
     const handleClick = (id) => {
         if (id !== 'p1q3') {
             router.push({
-                    pathname: `/file-display`,
-                    query: {
-                        id: id
-                    }
+                    pathname: `/pdf/${id}.pdf`,
                 }
             )
             //     script for hardware
@@ -28,10 +25,7 @@ const Paper1 = () => {
             if (clicked > 1) {
                 clicked = 0
                 router.push({
-                        pathname: `/file-display`,
-                        query: {
-                            id: id
-                        }
+                        pathname: `/pdf/${id}.pdf`,
                     }
                 )
             } else if (clicked > 0) {
@@ -51,7 +45,6 @@ const Paper1 = () => {
     const aboutRoute = () => {
         router.replace('/about')
     }
-
 
 
     // const titleClick = ()=>{
