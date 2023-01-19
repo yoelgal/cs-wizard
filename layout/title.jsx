@@ -8,7 +8,7 @@ const Title = ()=>{
     let clicked = false
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const titles = [ "<span>CS Wizard</span>","<span>&lcub; &quot;title&quot;:&quot;CS Wizard&quot; &rcub;</span>", "<span>// CS Wizard</span>", "<span>/* CS Wizard */</span>", '<span># CS Wizard</span>','<span>CSWizard()</span>','<span>CS.Wizard.js</span>','<span>! CS Wizard</span>','<span>CSWizard;</span>','<span>-- CS Wizard</span>','<span>"" || CS Wizard</span>', "<span>CS <em>Rizzard</em></span>"]
+    const titles = [ "<span>CS Wizard</span>", "<span>// CS Wizard</span>", "<span>/* CS Wizard */</span>", '<span># CS Wizard</span>','<span>CSWizard()</span>','<span>CS.Wizard.js</span>','<span>! CS Wizard</span>','<span>CSWizard;</span>','<span>-- CS Wizard</span>','<span>"" || CS Wizard</span>', "<span>CS <em>Rizzard</em></span>"]
     let titleNum
 
 

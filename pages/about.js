@@ -51,8 +51,8 @@ const About = () => {
                         className={styles.linkInPara}>[gceguide.com]</a> for providing me with the resources needed
                         to put
                         together the questions and solutions provided.</p>
-                    <p>If you would like to support the site, you can do so by sharing it with others, or via <span
-                        className={styles.linkInPara} onClick={() => supportRoute()}>[donation]</span>.</p>
+                    <p>If you would like to support the site, please share with others so more people can make use of this resource :)</p>
+                    <p>Thank You</p>
 
                 </div>
             </article>

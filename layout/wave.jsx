@@ -1,5 +1,6 @@
 import React from 'react'
 import Wave from 'react-wavify'
+import styles from '../styles/Wave.module.css'
 
 const WaveComponent = () => (
     <Wave fill='url(#gradient)'
@@ -10,6 +11,7 @@ const WaveComponent = () => (
               speed: 0.3,
               points: 5
           }}
+          className={styles.wave}
     >
         <defs>
             <linearGradient id="gradient" gradientTransform="rotate(90)">

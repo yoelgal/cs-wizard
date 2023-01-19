@@ -77,7 +77,7 @@ const Home = () => {
                 <div id={'Content'} className={styles.content}>
                     <p className={styles.pageHeader} onClick={()=>paper1Route()}>Paper 1</p>
                     <p className={styles.pageHeader} onClick={()=>paper3Route()}>Paper 3</p>
-                    <p className={styles.pageHeader} onClick={()=>extraRoute()}>Extras</p>
+                    {/*<p className={styles.pageHeader} onClick={()=>extraRoute()}>Extras</p>*/}
                 </div>
                 <div></div>
             </div>

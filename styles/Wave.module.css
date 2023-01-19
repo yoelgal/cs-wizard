@@ -1,0 +1,12 @@
+@media only screen and (max-width: 650px) {
+    .wave {
+        visibility: hidden;
+        height: 1rem;
+    }
+}
+
+@media only screen and (min-width: 651px) {
+    .wave {
+        visibility: visible;
+    }
+}
