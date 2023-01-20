@@ -98,6 +98,9 @@
 }
 
 
+.contribute {
+    font-size: 0.9rem;
+}
 
 .contribute:hover {
     color: #0070f3;
