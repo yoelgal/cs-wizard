@@ -41,7 +41,7 @@ const Home = () => {
         router.push('/paper1')
     }
     const paper3Route = ()=>{
-        router.push('/paper3')
+        // router.push('/paper3')
     }
 
     const extraRoute =()=>{
@@ -76,7 +76,7 @@ const Home = () => {
 
                 <div id={'Content'} className={styles.content}>
                     <p className={styles.pageHeader} onClick={()=>paper1Route()}>Paper 1</p>
-                    <p className={styles.pageHeader} onClick={()=>paper3Route()}>Paper 3</p>
+                    <p className={styles.pageHeader3} onClick={()=>paper3Route()}>Paper 3</p>
                     {/*<p className={styles.pageHeader} onClick={()=>extraRoute()}>Extras</p>*/}
                 </div>
                 <div></div>
