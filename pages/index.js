@@ -84,7 +84,7 @@ const Home = () => {
                 <Title></Title>
 
                 <div id={'Content'} className={styles.content}>
-                    <p className={styles.pageHeader} onClick={()=>paper1Route()}>Paper 1</p>
+                    <p className={styles.pageHeader} onClick={()=>paper1Route()} href="/paper1">Paper 1</p>
                     <p className={styles.pageHeader3} onClick={()=>paper3Route()}>Paper 3</p>
                     {/*<p className={styles.pageHeader} onClick={()=>extraRoute()}>Extras</p>*/}
                 </div>
@@ -115,7 +115,7 @@ const Home = () => {
                     OpenSource!
                     Contribute here</a></p>
 
-                <p className={styles.footerLinks}><span onClick={() => aboutRoute()}>About</span></p>
+                <p className={styles.footerLinks}><span onClick={() => aboutRoute()} href="/about">About</span></p>
                 <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
                 <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
                     CIE</p>

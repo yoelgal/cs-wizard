@@ -36,7 +36,7 @@ const About = () => {
             flexDirection: 'column',
             justifyContent: 'space-between'
         }}>
-            <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()}>CS Wizard</Header>
+            <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()} href="/">CS Wizard</Header>
             <article>
 
                 <h1 className={styles.header} style={{fontSize: "4rem", marginBottom: "0"}}>About</h1>
