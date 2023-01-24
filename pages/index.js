@@ -64,6 +64,15 @@ const Home = () => {
 
     return (
         <>
+            <Head>
+                <title>CS Wizard</title>
+                <meta name="description" content="Revision tool for computer science A level!" />
+                <meta property="og:title" content="CS Wizard" />
+                <meta property="og:description" content="Revision tool for computer science A level!" />
+                <meta property="og:url" content="https://cswizard.vercel.app/" />
+                <meta property="og:type" content="website" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div style={{
                 position: 'relative',
                 minHeight: '100vh',

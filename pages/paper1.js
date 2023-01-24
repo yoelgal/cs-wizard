@@ -5,6 +5,7 @@ import {useRouter} from "next/router";
 import React, {useEffect, useState, useRef, useImperativeHandle} from 'react';
 import WaveComponent from "../layout/wave";
 import Title from "../layout/title";
+import Head from "next/head";
 
 
 const Paper1 = () => {
@@ -60,6 +61,15 @@ const Paper1 = () => {
 
     return (
         <>
+            <Head>
+                <title>CS Wizard - Paper 1</title>
+                <meta name="description" content="Questions to help with AS studies" />
+                <meta property="og:title" content="CS Wizard" />
+                <meta property="og:description" content="Questions to help with AS studies" />
+                <meta property="og:url" content="https://cswizard.vercel.app/paper1" />
+                <meta property="og:type" content="website" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div style={{
                 position: 'relative',
                 minHeight: '100vh',

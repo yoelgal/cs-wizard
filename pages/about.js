@@ -19,6 +19,15 @@ const About = () => {
 
 
     return (<>
+        <Head>
+            <title>CS Wizard - About</title>
+            <meta name="description" content="About CS Wizard" />
+            <meta property="og:title" content="CS Wizard" />
+            <meta property="og:description" content="About CS Wizard" />
+            <meta property="og:url" content="https://cswizard.vercel.app/about" />
+            <meta property="og:type" content="website" />
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <div style={{
             textAlign: 'center',
             position: 'relative',
