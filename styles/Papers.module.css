@@ -62,6 +62,7 @@
     color: #0070f3;
     font-size: 1.2rem;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .footerSmall {
