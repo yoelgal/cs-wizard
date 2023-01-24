@@ -22,8 +22,10 @@ html {
 }
 
 body {
-    color: white;
-    background: #000000;
+    /*color: #f5f5fa;*/
+    color: aliceblue;
+    /*background: #17171f;*/
+    background: #0c0c0f;
 }
 
 
