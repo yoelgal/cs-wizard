@@ -78,7 +78,7 @@ const Paper1 = () => {
                 justifyContent: 'space-between'
             }}>
 
-                <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()} href="https://cswizard.vercel.app/">CS Wizard</Header>
+                <Header as="h1" id={'title'} className={styles.title} onClick={() => homeRoute()} ><a href="https://cswizard.vercel.app/">CS Wizard</a></Header>
 
                 <article style={{top: '50%'}}>
                     <Header as="h2" style={{textAlign: "center"}}>Paper 1</Header>
@@ -132,7 +132,7 @@ const Paper1 = () => {
                     OpenSource!
                     Contribute here</a></p>
 
-                <p className={styles.footerLinks}><span onClick={() => aboutRoute()} href="https://cswizard.vercel.app/about">About</span></p>
+                <p className={styles.footerLinks}><span onClick={() => aboutRoute()} ><a href="https://cswizard.vercel.app/about">About</a></span></p>
                 <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
                 <p className={styles.footerSmall}>Disclaimer: All questions and solutions shown are property of
                     CIE</p>
