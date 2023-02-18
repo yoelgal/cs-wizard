@@ -1,15 +1,15 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { Table, Header } from "semantic-ui-react";
-import topics from "../utils/topics.json";
-import { useRouter } from "next/router";
-import { NextSeo } from "next-seo";
-import React, { useEffect, useState, useRef, useImperativeHandle } from "react";
 import { motion } from "framer-motion";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Script from "next/script";
-import WaveComponent from "../layout/wave";
+import React, { useEffect, useImperativeHandle, useRef, useState } from "react";
+import { Header, Table } from "semantic-ui-react";
 import Title from "../layout/title";
+import WaveComponent from "../layout/wave";
+import styles from "../styles/Home.module.css";
+import topics from "../utils/topics.json";
 
 const Home = () => {
   // // eslint-disable-next-line react-hooks/exhaustive-deps
