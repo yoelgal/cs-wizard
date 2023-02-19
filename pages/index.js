@@ -36,7 +36,7 @@ const Home = () => {
   const extraRoute = () => {
     router.push("/extrastuff");
   };
-
+  
   // const titleClick = ()=>{
   //     const title = document.getElementById('title')
   //     if (titleNum < titles.length - 1) {
@@ -46,7 +46,7 @@ const Home = () => {
   //     }
   //     title.innerText = titles[titleNum]
   // }
-
+  
   return (
     <>
       <Head>
