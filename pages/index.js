@@ -37,6 +37,7 @@ const Home = () => {
         // router.push('/paper3')
     };
 
+
     const extraRoute = () => {
         router.push("/extrastuff");
     };
