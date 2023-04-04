@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useImperativeHandle, useRef, useState } from "react";
 import { Header, Table } from "semantic-ui-react";
@@ -78,10 +79,10 @@ const Home = () => {
 
         <div id={"Content"} className={styles.content}>
           <p className={styles.pageHeader} onClick={() => paper1Route()}>
-            <a href="https://cswizard.vercel.app/paper1">Paper 1</a>
+            <Link href={"/paper1"}>Paper 1</Link>
           </p>
-          <p className={styles.pageHeader3} onClick={() => paper3Route()}>
-            Paper 3
+          <p className={styles.pageHeader} onClick={() => paper3Route()}>
+            <Link href={"/paper3"}>Paper 3</Link>
           </p>
           {/*<p className={styles.pageHeader} onClick={()=>extraRoute()}>Extras</p>*/}
         </div>
@@ -148,7 +149,7 @@ const Home = () => {
 
         <p className={styles.footerLinks}>
           <span onClick={() => aboutRoute()}>
-            <a href="https://cswizard.vercel.app/about">About</a>
+            <Link href={"/about"}>About</Link>
           </span>
         </p>
         <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>

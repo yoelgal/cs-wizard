@@ -1,12 +1,11 @@
-import styles from "../styles/Papers.module.css";
-import { Table, Header } from "semantic-ui-react";
-import topics from "../utils/topics.json";
+import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState, useRef, useImperativeHandle } from "react";
-import WaveComponent from "../layout/wave";
+import React, { useEffect, useImperativeHandle, useRef, useState } from "react";
+import { Header, Table } from "semantic-ui-react";
 import Title from "../layout/title";
-
-// TODO: Add Paper 3 PDF's
+import WaveComponent from "../layout/wave";
+import styles from "../styles/Papers.module.css";
+import topics from "../utils/topics.json";
 
 const Paper3 = () => {
   const router = useRouter();
@@ -43,7 +42,7 @@ const Paper3 = () => {
           className={styles.title}
           onClick={() => homeRoute()}
         >
-          CS Wizard
+          <Link href={"/"}>CS Wizard</Link>
         </Header>
 
         <article style={{ top: "50%" }}>
@@ -65,20 +64,20 @@ const Paper3 = () => {
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {Array.from({ length: 6 }, (_, i) => (
+              {Array.from({ length: 8 }, (_, i) => (
                 <Table.Row key={i}>
                   <Table.Cell style={{ padding: 10 }}>
                     {topics.paper3[i]}
                   </Table.Cell>
                   <Table.Cell
                     className={styles.questionsAndSolutions}
-                    onClick={() => handleClick(`p3q${i + 13}`)}
+                    onClick={() => handleClick(`p3q${i + 1}`)}
                   >
                     Questions
                   </Table.Cell>
                   <Table.Cell
                     className={styles.questionsAndSolutions}
-                    onClick={() => handleClick(`p3s${i + 13}`)}
+                    onClick={() => handleClick(`p3s${i + 1}`)}
                   >
                     Solutions
                   </Table.Cell>
@@ -149,7 +148,9 @@ const Paper3 = () => {
         </p>
 
         <p className={styles.footerLinks}>
-          <span onClick={() => aboutRoute()}>About</span>
+          <span onClick={() => aboutRoute()}>
+            <Link href={"/about"}>About</Link>
+          </span>
         </p>
         <p className={styles.footerSmall}>Copyright © 2022 Yoel Gal</p>
         <p className={styles.footerSmall}>
