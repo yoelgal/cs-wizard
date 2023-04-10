@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useImperativeHandle, useRef, useState } from "react";
@@ -9,7 +10,6 @@ import topics from "../utils/topics.json";
 
 const Paper3 = () => {
   const router = useRouter();
-  let clicked = 0;
 
   const handleClick = (id) => {
     router.push({
@@ -27,6 +27,21 @@ const Paper3 = () => {
 
   return (
     <>
+      <Head>
+        <title>CS Wizard - Paper 3</title>
+        <meta
+          name="description"
+          content="Questions to help with Year 2 studies"
+        />
+        <meta property="og:title" content="CS Wizard" />
+        <meta
+          property="og:description"
+          content="Questions to help with Year 2 studies"
+        />
+        <meta property="og:url" content="https://cswizard.vercel.app/paper3" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div
         style={{
           position: "relative",

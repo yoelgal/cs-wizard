@@ -82,7 +82,7 @@ const Home = () => {
             <Link href={"/paper1"}>Paper 1</Link>
           </p>
           <p className={styles.pageHeader} onClick={() => paper3Route()}>
-            <Link href={"/paper3"}>Paper 3</Link>
+            <Link href={"/paper3"}>Paper 3 (Now Live)</Link>
           </p>
           {/*<p className={styles.pageHeader} onClick={()=>extraRoute()}>Extras</p>*/}
         </div>
